@@ -1,0 +1,18 @@
+[
+  {
+    "Age": "100 Years",
+    "Alignment": "Anything",
+    "Id": 0,
+    "Name": "Human",
+    "Size": "1.70m",
+    "Speed": "30ft"
+  },
+  {
+    "Age": "750 Years",
+    "Alignment": "Chaotic",
+    "Id": 0,
+    "Name": "Elf",
+    "Size": "1.65m",
+    "Speed": "30ft"
+  }
+]

@@ -1,0 +1,80 @@
+
+<h1> Select your class!</h1>
+
+<div class="point-buy">
+  <form [formGroup]="classForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+          <!-- Class select + Abilities-->
+
+          <strong>
+            Select a Class!      <select formControlName="class" (change)="loadAbilities($event.target.value);loadWeaponProfs($event.target.value);loadToolProfs($event.target.value);loadSkills($event.target.value);loadSkillAmount($event.target.value)">
+              <option hidden></option>
+              <option [ngValue]="classes.name" *ngFor="let classes of dndClass; let i = index" [attr.data-index]="i" value="{{classes.name}}">{{classes.name}}</option>
+            </select>
+          </strong>
+
+          <p>Class lvl 1 Abilities:</p>
+
+          <ul>
+            <li *ngFor="let abilities of classAbilities" title="{{abilities}}">{{abilities}}</li>
+
+
+
+          </ul>
+
+
+
+          <br />
+          <br />
+          <!-- Skill prof select-->
+        </div>
+        <div class="col-sm-10">
+
+          <strong>Allocate Skill Proficiencies!</strong>
+          <br /> <br />
+
+
+          <div *ngFor="let index of fakeArray; let i = index">
+            <p>Proficiency #{{i + 1}}</p>
+            <select formControlName="skill{{i + 1}}">
+              <option [ngValue]="skill" *ngFor="let skill of allowedSkills" value="{{skill}}">{{skill}}</option>
+            </select>
+
+
+            <br /> <br />
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+
+
+          <p>Weapon proficiencies:</p>
+          <ul>
+            <li *ngFor="let profs of weaponProfs" title="{{profs}}">{{profs}}</li>
+          </ul>
+
+        </div>
+        <div class="col-sm-10">
+          <p>Tool Proficiencies:</p>
+          <ul>
+            <li *ngFor="let profs of toolProfs" title="{{profs}}">{{profs}}</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <button type="button" class=" btn-light" routerLink="/creator">Back</button>
+
+    <input type="submit" value="Continue" (click)="onSubmit()" class="btn-light" [routerLink]='["/equipment"]'>
+  </form>
+</div>
+<br />
+
+

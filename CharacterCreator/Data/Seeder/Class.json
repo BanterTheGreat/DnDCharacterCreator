@@ -1,0 +1,12 @@
+[
+  {
+    "Id": 0,
+    "Name": "Fighter",
+    "HitDice": 10
+  },
+  {
+    "Id": 0,
+    "Name": "Cleric",
+    "HitDice": 8
+  }
+]

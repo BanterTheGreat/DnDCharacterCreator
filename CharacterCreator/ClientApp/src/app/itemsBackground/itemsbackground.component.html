@@ -1,0 +1,100 @@
+
+<h1> Select your equipment and background!</h1>
+<div class="point-buy">
+  <form [formGroup]="backgroundForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <!-- Class select + Abilities-->
+          <strong>
+            Select your equipment!
+          </strong>
+          <br />
+          <div *ngFor="let equipment of data.possibleEquipment; let i = index">
+            <input [value]="equipment.choice1" type="radio" id="EquipChoice{{i + 1}}"
+                   formControlName="equip{{i + 1}}" name="equip{{i + 1}}"  value="{{equipment.choice1}}">
+            <label  for="EquipChoice{{i + 1}}">{{equipment.choice1}}</label>
+            <br />
+            <input type="radio" id="EquipChoice{{i + 2}}"
+                   formControlName="equip{{i + 1}}" name="equip{{i + 1}}" [value]="equipment.choice2" value="{{equipment.choice2}}">
+            <label for="EquipChoice{{i + 2}}">{{equipment.choice2}}</label>
+            <br /> <br />
+          </div>
+
+
+
+
+          <br />
+          <br />
+          <!-- Skill prof select-->
+        </div>
+
+        <div class="col-sm-8">
+
+          <strong>Select your background!</strong> <br />
+          <select formControlName="background" (change)="loadLanguage($event.target.value);loadTools($event.target.value);loadSkills($event.target.value);loadItems($event.target.value)">
+            <option value="Null" disabled hidden></option>
+            <option [ngValue]="ground.backgroundTitle" *ngFor="let ground of backgrounds; let i = index" [attr.data-index]="i" value="{{ground.backgroundTitle}}">{{ground.backgroundTitle}}</option>
+          </select>
+          <br />
+          <br />
+          <p>Extra Language</p>
+          <select formControlName="language1">
+            <option value="NONE" disabled>Select a background</option>
+            <option [ngValue]="language" *ngFor="let language of languages; let i = index" [attr.data-index]="i" value="{{language}}">{{language}}</option>
+          </select>
+
+          <br />
+          <br />
+          <p>Extra Tool proficiency</p>
+          <select formControlName="tool1">
+            <option value="NONE" disabled>Select a background</option>
+            <option [ngValue]="tool" *ngFor="let tool of tools; let i = index" [attr.data-index]="i" value="{{tool}}">{{tool}}</option>
+          </select>
+          <br />
+          <br />
+
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <p>Background Items</p>
+          <ul>
+            <li *ngFor="let item of items" title="{{item}}">{{item}}</li>
+          </ul>
+
+        </div>
+        <div class="col-sm-8">
+          <strong>Extra skill proficiencies!</strong>
+
+          <br /> <br />
+
+          <div *ngFor="let skill of skills; let i = index" [attr.data-index]="i">
+
+            <p>Proficiency #{{i + 1}}</p>
+
+            <select formControlName="skill{{i + 1}}">
+              <option [ngValue]="skill" value="{{skill}}">{{skill}}</option>
+            </select>
+            <br /> <br />
+          </div>
+
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    <button class=" btn-light" [routerLink]='["/pointbuy"]'>Back</button>
+    <input type="submit" value="Finish" (click)="onSubmit()" class=" btn-light" [routerLink]='["/"]'>
+  </form>
+</div>
+<br />
+
+
+

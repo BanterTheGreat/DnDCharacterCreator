@@ -1,0 +1,77 @@
+[
+  {
+    "id": 0,
+    "AllowedSkill": "Acrobatics"
+  },
+  {
+    "id": 0,
+    "AllowedSkill": "Animal Handling"
+    
+  },
+  {
+    "id": 0,
+    "AllowedSkill": "Arcana"
+  },
+  {
+    "id": 0,
+    "AllowedSkill": "Athletics"
+  },
+  {
+    "id": 0,
+    "AllowedSkill": "Deception"
+  },
+  {
+    "id": 0,
+    "AllowedSkill": "History"
+  },
+  {
+    "id": 0,
+    "AllowedSkill": "Insight"
+  },
+  {
+    "id": 0,
+    "AllowedSkill": "Intimidation"
+  },
+  {
+    "id": 0,
+    "AllowedSkill": "Investigation"
+  },
+  {
+    "id": 0,
+    "AllowedSkill": "Medicine"
+  },
+  {
+    "id": 0,
+    "AllowedSkill": "Nature"
+  },
+  {
+    "id": 0,
+    "AllowedSkill": "Perception"
+  },
+  {
+    "id": 0,
+    "AllowedSkill": "Performance"
+  },
+  {
+    "id": 0,
+    "AllowedSkill": "Persuasion"
+  },
+  {
+    "id": 0,
+    "AllowedSkill": "Religion"
+  },
+  {
+    "id": 0,
+    "AllowedSkill": "Sleight of Hand"
+  },
+  {
+    "id": 0,
+    "AllowedSkill": "Stealth"
+  },
+  {
+    "id": 0,
+    "AllowedSkill": "Survival"
+  }
+
+
+]

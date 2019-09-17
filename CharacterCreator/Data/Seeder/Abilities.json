@@ -1,0 +1,14 @@
+[
+  {
+    "Id": 0,
+    "Class": "Fighter",
+    "AbilityTitle": "Fighting Style",
+    "AbilityDesc": "You can choose a fighting style."
+  },
+  {
+    "AbilityDesc": "At first level, on your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again",
+    "AbilityTitle": "Second Wind",
+    "Class": "Fighter",
+    "Id": 0
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "Id": 0,
+    "Class": "Fighter",
+    "SkillsProfAmount": 2
+  },
+  {
+    "Id": 0,
+    "Class": "Barbarian",
+    "SkillsProfAmount": 2
+  },
+  {
+    "Id": 0,
+    "Class": "Bard",
+    "SkillsProfAmount": 3
+  },
+  {
+    "Id": 0,
+    "Class": "Cleric",
+    "SkillsProfAmount": 2
+  },
+  {
+    "Id": 0,
+    "Class": "Druid",
+    "SkillsProfAmount": 2
+  },
+  {
+    "Id": 0,
+    "Class": "Monk",
+    "SkillsProfAmount": 2
+  },
+  {
+    "Id": 0,
+    "Class": "Paladin",
+    "SkillsProfAmount": 2
+  },
+  {
+    "Id": 0,
+    "Class": "Ranger",
+    "SkillsProfAmount": 3
+  },
+  {
+    "Id": 0,
+    "Class": "Rogue",
+    "SkillsProfAmount": 4
+  },
+  {
+    "Id": 0,
+    "Class": "Sorcerer",
+    "SkillsProfAmount": 2
+  },
+  {
+    "Id": 0,
+    "Class": "Warlock",
+    "SkillsProfAmount": 2
+  },
+  {
+    "Id": 0,
+    "Class": "Wizard",
+    "SkillsProfAmount":  2
+  },
+]

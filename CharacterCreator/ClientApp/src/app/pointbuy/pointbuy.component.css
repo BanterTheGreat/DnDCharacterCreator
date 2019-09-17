@@ -1,0 +1,31 @@
+.point-buy {
+  border: 1px solid grey;
+  display: inline-block;
+  padding: 8px 2px;
+  margin: 2px;
+  width: 450px;
+  background-color: lightgray;
+  border-radius: 5px;
+  align-content: center;
+}
+
+
+
+
+
+.point-allocation {
+  padding: 5px;
+  border: 1px thin blue;
+  display: inline-block;
+}
+
+  .point-allocation input {
+    width: 45px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+.point-allocation label {
+  width: 35px;
+  display: inline-block;
+}

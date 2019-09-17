@@ -1,0 +1,23 @@
+
+<h1> Summary </h1>
+<div class="point-buy">
+  <p> Name:  </p>
+  <p> Race: {{data.characterRace}}</p>
+  <p> Background: {{data.characterBackground}}</p>
+  <p *ngFor="let language of data.characterLanguage; let i = index"> Language #{{i + 1}}: {{language}}</p>
+  <p *ngFor="let trait of data.characterRaceAttributes"> RaceTrait: {{trait}} </p>
+  <p> Class: {{data.characterClass}} </p>
+  <p *ngFor="let ability of data.characterClassAbilities; let i = index"> Ability #{{i + 1}}: {{ability}}</p>
+  <p *ngFor="let skill of data.characterSkills; let i = index"> Skill #{{i + 1}}: {{skill}}</p>
+  <p *ngFor="let tool of data.characterTools; let i = index"> Tool #{{i + 1}}: {{tool}}</p>
+  <p> Equipment </p>
+  <ol>
+    <li *ngFor="let equip of data.characterEquipment">{{equip}}</li>
+  </ol>
+
+
+</div>
+<br />
+<button class="btn-light" [routerLink]='["/class"]'>Finish</button>
+<!--<a [routerLink]='["/fetch-data"]' (click)='collapse()'>
+-->

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "Ability": "Strength",
+    "Increase": 1,
+    "Class": "Human"
+  },
+  {
+    "Ability": "Dexterity",
+    "Class": "Human",
+    "id": 0,
+    "Increase": 1
+  },
+  {
+    "id": 0,
+    "Ability": "Constitution",
+    "Increase": 1,
+    "Class": "Human"
+  },
+  {
+    "id": 0,
+    "Ability": "Wisdom",
+    "Increase": 1,
+    "Class": "Human"
+  },
+  {
+    "id": 0,
+    "Ability": "Intelligence",
+    "Increase": 1,
+    "Class": "Human"
+  },
+  {
+    "id": 0,
+    "Ability": "Charisma",
+    "Increase": 1,
+    "Class": "Human"
+  }
+]

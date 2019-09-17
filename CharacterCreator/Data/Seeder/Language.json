@@ -1,0 +1,54 @@
+[
+  {
+    "Id": 0,
+    "LanguageName": "Abyssal"
+  },
+  {
+    "Id": 0,
+    "LanguageName": "Common"
+  },
+  {
+    "Id": 0,
+    "LanguageName": "Deep Speech"
+  },
+  {
+    "Id": 0,
+    "LanguageName": "Draconic"
+  },
+  {
+    "Id": 0,
+    "LanguageName": "Dwarvish"
+  },
+  {
+    "Id": 0,
+    "LanguageName": "Elvish"
+  },
+  {
+    "Id": 0,
+    "LanguageName": "Giant"
+  },
+  {
+    "Id": 0,
+    "LanguageName": "Gnomish"
+  },
+  {
+    "Id": 0,
+    "LanguageName": "Goblin"
+  },
+  {
+    "Id": 0,
+    "LanguageName": "Gnoll"
+  },
+  {
+    "Id": 0,
+    "LanguageName": "Halfling"
+  },
+  {
+    "Id": 0,
+    "LanguageName": "Orc"
+  },
+  {
+    "Id": 0,
+    "LanguageName": "Undercommon"
+  }
+]

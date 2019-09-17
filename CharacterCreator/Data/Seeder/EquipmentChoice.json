@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 0,
+    "Class": "Fighter",
+    "Choice1": "Chain Mail",
+    "Choice2": "Leather armor, longbow and 20 arrows"
+  },
+  {
+    "Id": 0,
+    "Class": "Fighter",
+    "Choice1": "A martial weapon and a shield",
+    "Choice2": "Two martial weapons"
+  },
+  {
+    "Id": 0,
+    "Class": "Fighter",
+    "Choice1": "A light crossbow and 20 bolts",
+    "Choice2": "Two handaxes"
+  },
+  {
+    "Id": 0,
+    "Class": "Fighter",
+    "Choice1": "Dungeoneers pack",
+    "Choice2": "Explorers pack"
+  },
+]

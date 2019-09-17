@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "CreatorConnectionString": "server=(localdb)\\MSSQLLocalDB;Database=CharacterCreatorDB;Integrated Security=true;MultipleActiveResultSets=true"
+  }
+}

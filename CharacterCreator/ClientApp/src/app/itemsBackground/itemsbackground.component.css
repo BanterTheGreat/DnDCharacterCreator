@@ -1,0 +1,42 @@
+.point-buy {
+  border: 1px solid grey;
+  display: inline-block;
+  padding: 32px 2px;
+  margin: 2px;
+  width: 600px;
+  background-color: lightgray;
+  border-radius: 5px;
+  align-content: center;
+}
+
+
+
+
+
+.point-allocation {
+  padding: 5px;
+  border: 1px thin blue;
+  display: inline-block;
+}
+
+  .point-allocation input {
+    width: 30px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .point-allocation label {
+    width: 35px;
+    display: inline-block;
+  }
+
+.rollMoney {
+  width: 40px;
+
+  font-size: 14px;
+  text-align: center;
+}
+
+.container {
+  padding: 12px;
+}

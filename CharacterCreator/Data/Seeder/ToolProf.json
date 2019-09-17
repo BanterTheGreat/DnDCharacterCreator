@@ -1,0 +1,207 @@
+[
+  {
+    "Id": 0,
+    "Type":  "None",
+    "ToolProfName": "None"
+  },
+  {
+    "Id": 0,
+    "Type":  "None",
+    "ToolProfName": "Three musical instruments"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Alchemist's supplies"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Brewer's supplies"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Calligrapher's supplies"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Carpenter's tools"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Cartographer's tools"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Cobbler's tools"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Cook's utensils"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Glassblower's tools"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Mason's tools"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Jeweler's tools"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Leatherworker's tools"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Painter's tools"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Potter's tools"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Smith's tools"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Tinker's tools"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Weaver's tools"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Woodcarver's tools"
+  },
+  {
+    "Id": 0,
+    "Type": "None",
+    "ToolProfName": "Disguise kit"
+  },
+  {
+    "Id": 0,
+    "Type": "None",
+    "ToolProfName": "Forgery kit"
+  },
+  {
+    "Id": 0,
+    "Type": "Gaming Set",
+    "ToolProfName": "Dice set"
+  },
+  {
+    "Id": 0,
+    "Type": "Gaming Set",
+    "ToolProfName": "Dragonchess set"
+  },
+  {
+    "Id": 0,
+    "Type": "Gaming Set",
+    "ToolProfName": "Playing card set"
+  },
+  {
+    "Id": 0,
+    "Type": "Gaming Set",
+    "ToolProfName": "Three-Dragon Ante set"
+  },
+  {
+    "Id": 0,
+    "Type": "None",
+    "ToolProfName": "Thieves' tools"
+  },
+  {
+    "Id": 0,
+    "Type": "None",
+    "ToolProfName": "Navigator's tools"
+  },
+  {
+    "Id": 0,
+    "Type": "None",
+    "ToolProfName": "Poisoner's kit"
+  },
+  {
+    "Id": 0,
+    "Type": "Vehicle",
+    "ToolProfName": "Land vehicle"
+  },
+  {
+    "Id": 0,
+    "Type": "Vehicle",
+    "ToolProfName": "Water vehicle"
+  },
+  {
+    "Id": 0,
+    "Type": "Artisan's tools",
+    "ToolProfName": "Painter's tools"
+  },
+  {
+    "Id": 0,
+    "Type": "Musical Instrument",
+    "ToolProfName": "Bagpipes"
+  },
+  {
+    "Id": 0,
+    "Type": "Musical Instrument",
+    "ToolProfName": "Drum"
+  },
+  {
+    "Id": 0,
+    "Type": "Musical Instrument",
+    "ToolProfName": "Dulcimer"
+  },
+  {
+    "Id": 0,
+    "Type": "Musical Instrument",
+    "ToolProfName": "Flute"
+  },
+  {
+    "Id": 0,
+    "Type": "Musical Instrument",
+    "ToolProfName": "Lute"
+  },
+  {
+    "Id": 0,
+    "Type": "Musical Instrument",
+    "ToolProfName": "Lyre"
+  },
+  {
+    "Id": 0,
+    "Type": "Musical Instrument",
+    "ToolProfName": "Horn"
+  },
+  {
+    "Id": 0,
+    "Type": "Musical Instrument",
+    "ToolProfName": "Pan flute"
+  },
+  {
+    "Id": 0,
+    "Type": "Musical Instrument",
+    "ToolProfName": "Shawm"
+  },
+  {
+    "Id": 0,
+    "Type": "Musical Instrument",
+    "ToolProfName": "Viol"
+  }
+]
