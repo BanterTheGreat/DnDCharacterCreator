@@ -5,19 +5,24 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-2">
+          <p>Give a name!</p>
+          <strong>
+            <input type="text" formControlName="name" value="$event.target.value"/>
+          </strong>
+
           <p>Select a Race!</p>
 
           <strong>
-            <select name="classChosen"  formControlName="race"  (change)="loadTraits($event.target.value);loadLanguages($event.target.value)">
+            <select name="classChosen" formControlName="race" (change)="loadTraits($event.target.value);loadLanguages($event.target.value)">
               <option value="Null" disabled hidden></option>
-              <option [ngValue]="races.name"  *ngFor="let races of dndRace; let i = index" [attr.data-index]="i" value="{{races.name}}">{{races.name}}</option>
+              <option [ngValue]="races.name" *ngFor="let races of dndRace; let i = index" [attr.data-index]="i" value="{{races.name}}">{{races.name}}</option>
             </select>
           </strong>
 
           <p>Race Attributes:</p>
 
           <ul>
-            <li *ngFor="let traits of raceTraits" title="{{traits}}">{{traits}}</li>
+            <li *ngFor="let traits of raceTraits" title="{{traits.traitDesc}}">{{traits.traitName}}</li>
 
 
           </ul>

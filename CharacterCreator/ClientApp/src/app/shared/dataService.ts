@@ -6,6 +6,7 @@ import { tap, map } from 'rxjs/operators';
 
 @Injectable()
 export class DataService {
+ 
   constructor(private http: HttpClient) {
 
   }
@@ -19,22 +20,20 @@ export class DataService {
   public possibleEquipment: _entity.EquipmentChoice[];
 
   public chosenClass: _entity.dndClass
+  public chosenRace: _entity.dndRace
 
+
+  public characterName: string;
   public characterRace: string;
-  public characterRaceAttributes: string[];
+  public characterRaceAttributes: _entity.RaceTrait[];
   public characterClass: string;
-  public characterClassAbilities: string[];
+  public characterClassAbilities: _entity.Ability[];
   public characterSkills: string[];
   public characterTools: string[] = [];
   public characterEquipment: string[] = [];
   public characterBackground: string;
   public characterLanguage: string[] = [];
-
-
-
-
-
-
+  public characterAttributes: number[] = [];
 
 
   loadRaces(): Observable<boolean> {
@@ -69,9 +68,24 @@ export class DataService {
     this.characterEquipment = this.characterEquipment.filter(o => o !== 'Unavailable')
     this.characterTools = this.characterTools.filter(o => o !== 'Unavailable')
     this.characterLanguage = this.characterLanguage.filter(o => o !== 'Unavailable')
-
   }
 
+  addRaceBonuses(statArray: number[], Race: _entity.dndRace) {
+    for (let data of Race.abilityScoreIncrease) {
+      let arraySpot: number = 0;
+      if (data.ability == "Strength") { arraySpot = 0 }
+      if (data.ability == "Dexterity") { arraySpot = 1 }
+      if (data.ability == "Constitution") { arraySpot = 2 }
+      if (data.ability == "Intelligence") { arraySpot = 3 }
+      if (data.ability == "Wisdom") { arraySpot = 4 }
+      if (data.ability == "Charisma") { arraySpot = 5 }
+
+      statArray[arraySpot] += data.increase
+      
+    }
+    this.characterAttributes = statArray
+
+  }
 
 
 

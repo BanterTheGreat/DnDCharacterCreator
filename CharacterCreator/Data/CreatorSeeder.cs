@@ -201,7 +201,7 @@ namespace CharacterCreator.Data
                 var race = _ctx.Races.Where(r => r.Name == "Human").FirstOrDefault();
                 
                 var racetraits = _ctx.RaceTraits.Where(r => r.Race == "Human").ToList();
-                var abilities = _ctx.AbilityIncreases.Where(a => a.Class == "Human").ToList();
+                var abilities = _ctx.AbilityIncreases.Where(a => a.Race == "Human").ToList();
                 var languages = _ctx.Languages.Where(a => a.LanguageName == "Common"
                 | a.LanguageName == "Elvish"
                 | a.LanguageName == "Dwarvish")

@@ -115,3 +115,23 @@ export interface Background {
   backgroundVarSkill: AllowedSkill[];
   backgroundItem: BackgroundItem[];
 }
+
+export interface AbilityScores {
+  id: number;
+  strength: string;
+  dexterity: string;
+  constitution: string;
+  intelligence: string;
+  wisdom: string;
+  charisma: string;
+}
+
+export interface Character {
+  id: number;
+  name: string;
+  class: dndClass;
+  race: dndRace;
+  abilityscores: AbilityScores
+  background: Background;
+  alignment: string;
+}

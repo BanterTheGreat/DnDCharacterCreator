@@ -12,8 +12,8 @@ import { log } from "util";
 export class PointBuyComponent implements OnInit {
 
   dndRace: _entity.dndRace[];
-//  raceTraits: _entity.RaceTrait[] = [];
-  raceTraits: string[] = [];
+  //  raceTraits: _entity.RaceTrait[] = [];
+  raceTraits: _entity.RaceTrait[] = [];
   race: _entity.dndRace;
   languages: string[] = [];
 
@@ -23,6 +23,7 @@ export class PointBuyComponent implements OnInit {
 
   pointBuyForm = new FormGroup({
     race: new FormControl(''),
+    name: new FormControl('')
 
   })
 
@@ -54,7 +55,7 @@ export class PointBuyComponent implements OnInit {
       this.race = this.dndRace.find(x => x.name == name)
     this.raceTraits = [];
     for (let data of this.race.raceTrait) {
-      this.raceTraits.push(data.traitName)
+    this.raceTraits.push(data)
     }
     return this.raceTraits
   }
@@ -85,9 +86,13 @@ export class PointBuyComponent implements OnInit {
   }
 
   onSubmit() {
+    this.data.chosenRace = this.dndRace.find(x => x.name == this.pointBuyForm.value.race)
+    this.data.characterName = this.pointBuyForm.value.name
     this.data.characterRace = this.pointBuyForm.value.race
     this.data.characterRaceAttributes = this.raceTraits
     this.data.characterLanguage = this.languages
+    this.data.characterAttributes = this.pointArray
+    this.data.addRaceBonuses(this.pointArray, this.data.chosenRace)
   }
 
 

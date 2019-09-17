@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../shared/dataService';
+import * as _entity from "../shared/entities";
 
 @Component({
   selector: 'summary-app',
@@ -9,6 +10,9 @@ import { DataService } from '../shared/dataService';
 export class SummaryComponent {
 
   constructor(private data: DataService) { }
+
+  public character: _entity.Character
+
 
 
 

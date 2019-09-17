@@ -8,6 +8,24 @@ namespace CharacterCreator.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "AbilityScores",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Strength = table.Column<string>(nullable: true),
+                    Dexterity = table.Column<string>(nullable: true),
+                    Constitution = table.Column<string>(nullable: true),
+                    Intelligence = table.Column<string>(nullable: true),
+                    Wisdom = table.Column<string>(nullable: true),
+                    Charisma = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AbilityScores", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Backgrounds",
                 columns: table => new
                 {
@@ -249,7 +267,7 @@ namespace CharacterCreator.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Ability = table.Column<string>(nullable: true),
                     Increase = table.Column<int>(nullable: false),
-                    Class = table.Column<string>(nullable: true),
+                    Race = table.Column<string>(nullable: true),
                     RaceId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
@@ -343,12 +361,19 @@ namespace CharacterCreator.Migrations
                     Name = table.Column<string>(nullable: true),
                     ClassId = table.Column<int>(nullable: true),
                     RaceId = table.Column<int>(nullable: true),
+                    AbilityScoresId = table.Column<int>(nullable: true),
                     BackgroundId = table.Column<int>(nullable: true),
                     Alignment = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Characters", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Characters_AbilityScores_AbilityScoresId",
+                        column: x => x.AbilityScoresId,
+                        principalTable: "AbilityScores",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Characters_Backgrounds_BackgroundId",
                         column: x => x.BackgroundId,
@@ -387,31 +412,6 @@ namespace CharacterCreator.Migrations
                         name: "FK_EquipmentChoices_Classes_ClassId",
                         column: x => x.ClassId,
                         principalTable: "Classes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "AbilityScores",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Strength = table.Column<string>(nullable: true),
-                    Dexterity = table.Column<string>(nullable: true),
-                    Constitution = table.Column<string>(nullable: true),
-                    Intelligence = table.Column<string>(nullable: true),
-                    Wisdom = table.Column<string>(nullable: true),
-                    Charisma = table.Column<string>(nullable: true),
-                    CharacterId = table.Column<int>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AbilityScores", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_AbilityScores_Characters_CharacterId",
-                        column: x => x.CharacterId,
-                        principalTable: "Characters",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -474,11 +474,6 @@ namespace CharacterCreator.Migrations
                 column: "RaceId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_AbilityScores_CharacterId",
-                table: "AbilityScores",
-                column: "CharacterId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_AllowedSkills_BackgroundId",
                 table: "AllowedSkills",
                 column: "BackgroundId");
@@ -497,6 +492,11 @@ namespace CharacterCreator.Migrations
                 name: "IX_ArmorProfs_ProficienciesId",
                 table: "ArmorProfs",
                 column: "ProficienciesId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Characters_AbilityScoresId",
+                table: "Characters",
+                column: "AbilityScoresId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Characters_BackgroundId",
@@ -583,9 +583,6 @@ namespace CharacterCreator.Migrations
                 name: "AbilityIncreases");
 
             migrationBuilder.DropTable(
-                name: "AbilityScores");
-
-            migrationBuilder.DropTable(
                 name: "AllowedSkills");
 
             migrationBuilder.DropTable(
@@ -626,6 +623,9 @@ namespace CharacterCreator.Migrations
 
             migrationBuilder.DropTable(
                 name: "Characters");
+
+            migrationBuilder.DropTable(
+                name: "AbilityScores");
 
             migrationBuilder.DropTable(
                 name: "Backgrounds");

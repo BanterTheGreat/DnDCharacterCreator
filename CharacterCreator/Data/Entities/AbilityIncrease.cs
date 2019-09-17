@@ -11,6 +11,6 @@ namespace CharacterCreator.Data.Entities
         public int Id { get; set; }
         public string Ability { get; set; }
         public int Increase { get; set; }
-        public string Class { get; set; }
+        public string Race { get; set; }
     }
 }

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CharacterCreator.Migrations
 {
     [DbContext(typeof(CreatorContext))]
-    [Migration("20190916115457_InitialDb")]
+    [Migration("20190917092541_InitialDb")]
     partial class InitialDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,9 +50,9 @@ namespace CharacterCreator.Migrations
 
                     b.Property<string>("Ability");
 
-                    b.Property<string>("Class");
-
                     b.Property<int>("Increase");
+
+                    b.Property<string>("Race");
 
                     b.Property<int?>("RaceId");
 
@@ -69,8 +69,6 @@ namespace CharacterCreator.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CharacterId");
-
                     b.Property<string>("Charisma");
 
                     b.Property<string>("Constitution");
@@ -84,8 +82,6 @@ namespace CharacterCreator.Migrations
                     b.Property<string>("Wisdom");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CharacterId");
 
                     b.ToTable("AbilityScores");
                 });
@@ -179,6 +175,8 @@ namespace CharacterCreator.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("AbilityScoresId");
+
                     b.Property<string>("Alignment");
 
                     b.Property<int?>("BackgroundId");
@@ -190,6 +188,8 @@ namespace CharacterCreator.Migrations
                     b.Property<int?>("RaceId");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AbilityScoresId");
 
                     b.HasIndex("BackgroundId");
 
@@ -454,13 +454,6 @@ namespace CharacterCreator.Migrations
                         .HasForeignKey("RaceId");
                 });
 
-            modelBuilder.Entity("CharacterCreator.Data.Entities.AbilityScores", b =>
-                {
-                    b.HasOne("CharacterCreator.Data.Entities.Character")
-                        .WithMany("AbilityScores")
-                        .HasForeignKey("CharacterId");
-                });
-
             modelBuilder.Entity("CharacterCreator.Data.Entities.AllowedSkills", b =>
                 {
                     b.HasOne("CharacterCreator.Data.Entities.Background")
@@ -485,6 +478,10 @@ namespace CharacterCreator.Migrations
 
             modelBuilder.Entity("CharacterCreator.Data.Entities.Character", b =>
                 {
+                    b.HasOne("CharacterCreator.Data.Entities.AbilityScores", "AbilityScores")
+                        .WithMany()
+                        .HasForeignKey("AbilityScoresId");
+
                     b.HasOne("CharacterCreator.Data.Entities.Background", "Background")
                         .WithMany()
                         .HasForeignKey("BackgroundId");

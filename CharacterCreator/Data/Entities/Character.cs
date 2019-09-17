@@ -12,7 +12,7 @@ namespace CharacterCreator.Data.Entities
         public string Name { get; set; }
         public Class Class { get; set; }
         public Race Race { get; set; }
-        public ICollection<AbilityScores> AbilityScores { get; set; }
+        public AbilityScores AbilityScores { get; set; }
         public Background Background { get; set; }
         public string Alignment { get; set; }
         public IList<Spell> Spells { get; set; }

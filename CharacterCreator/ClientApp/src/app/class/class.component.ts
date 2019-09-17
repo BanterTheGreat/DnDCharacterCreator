@@ -16,8 +16,8 @@ export class ClassComponent implements OnInit {
   currentClass: _entity.dndClass;
   equipmentChoices: _entity.EquipmentChoice[];
 
-  
-  classAbilities: string[] = [];
+
+  classAbilities: _entity.Ability[] = [];
   toolProfs: string[] = [];
   weaponProfs: string[] = [];
   allowedSkills: string[] = [];
@@ -61,7 +61,7 @@ export class ClassComponent implements OnInit {
     this.currentClass = this.dndClass.find(x => x.name == name)  //Add data from selected class to variable
     this.classAbilities = [];                 // Wipe data before filling.
     for (let data of this.currentClass.abilities) { // For loop.
-      this.classAbilities.push(data.abilityTitle) // Add data from entity to variable.
+      this.classAbilities.push(data) // Add data from entity to variable.
       
     }
     return this.classAbilities

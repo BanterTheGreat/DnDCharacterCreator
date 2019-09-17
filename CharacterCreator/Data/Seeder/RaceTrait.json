@@ -2,7 +2,7 @@
   {
     "Id": 0,
     "Race": "Human",
-    "TraitName": "None",
-    "TraitDesc":  "Nothing"
+    "TraitName": "+1 to all attributes",
+    "TraitDesc":  "+1 to all attributes"
   }
 ]
